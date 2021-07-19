@@ -10,7 +10,7 @@ var spawn = require('child_process').spawn;
 var fs = require('fs');
 
 app.use(express.static('public'));
-const server = require('http').createServer(//{
+const server = require('https').createServer(//{
  //key: fs.readFileSync('abels-key.pem'),
  // cert: fs.readFileSync('abels-cert.pem')
  
@@ -199,7 +199,7 @@ io.on('error',function(e){
 //});
 
 server.listen(444, function(){
-  console.log('https and websocket listening on *:1437');
+  console.log('https and websocket listening on *:444');
 });
 
 process.on('uncaughtException', function(err) {
