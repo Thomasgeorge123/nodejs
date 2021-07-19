@@ -12,7 +12,7 @@ var fs = require('fs');
 
 app.use(express.static('public'));
 app.use(cors());
-const server = require('https').createServer(//{
+const server = require('http').createServer(//{
  //key: fs.readFileSync('abels-key.pem'),
  // cert: fs.readFileSync('abels-cert.pem')
  
